@@ -140,12 +140,6 @@ public class login extends javax.swing.JFrame {
                 btnconnecterMousePressed(evt);
             }
         });
-        btnconnecter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnconnecterActionPerformed(evt);
-                confermationlogin(evt);
-            }
-        });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Employé" }));
 
@@ -296,26 +290,27 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnannulerActionPerformed
 
-   static home home_interface;
+   
     
-    private void btnconnecterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnconnecterActionPerformed
-        // verifier l'identité de l'utilisateur ici 
-        Main.login_interface.setVisible(false);
-        home_interface = new home();
-        home_interface.setVisible(true);
-    }//GEN-LAST:event_btnconnecterActionPerformed
-
     private void btnannulerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnannulerMouseClicked
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_btnannulerMouseClicked
-
+    static home home_interface;
+    
     private void btnconnecterMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnconnecterMousePressed
         // TODO add your handling code here:
-         String u=txtnom.getText();
-
-        String p;
-        p = txtpass.getText();
+        String u = txtnom.getText();
+        String p = txtpass.getText();
+        
+        
+        if (!u.equals("") && !p.equals("")){
+            System.out.println(p);
+            System.out.println(u);
+            home_interface = new home();
+            Main.login_interface.setVisible(false);
+            home_interface.setVisible(true);
+        }
         
     }//GEN-LAST:event_btnconnecterMousePressed
 
@@ -357,45 +352,6 @@ public class login extends javax.swing.JFrame {
             int Y = thisY + yMoved;
             parent.setLocation(X, Y);
     }//GEN-LAST:event_jPanel3MouseDragged
-
-    private void confermationlogin(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confermationlogin
-        // TODO add your handling code here:
-       /* String u=txtnom.getText();
-
-        String p=txtpass.getText();
-
-        
-
- 
-
-        if(evt.getSource()==btnconnecter)
-
-        {
-
-            if(u.equals("")||u==null)
-
-            {
-
-                JOptionPane.showMessageDialog(rootPane, "Fill the username");
-
-            }
-
-            else
-
-            {
-
-                if(p.equals("")||p==null)
-
-                {
-
-                    JOptionPane.showMessageDialog(rootPane, "Fill the password");
-
-                }
-
-            }
-
-        }*/
-    }//GEN-LAST:event_confermationlogin
 
     
     /**

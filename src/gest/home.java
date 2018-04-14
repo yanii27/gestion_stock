@@ -268,6 +268,11 @@ public class home extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gest/images/icons8-sortie-32.png"))); // NOI18N
         jLabel3.setText("   Sortie");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel3MousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnuserLayout = new javax.swing.GroupLayout(btnuser);
         btnuser.setLayout(btnuserLayout);
@@ -578,6 +583,13 @@ public class home extends javax.swing.JFrame {
         cpanel.revalidate();
 
     }//GEN-LAST:event_btnsupprimerMouseClicked
+
+    private void jLabel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MousePressed
+        // TODO add your handling code here:
+        
+       login.home_interface.setVisible(false);
+       Main.login_interface.setVisible(true);
+    }//GEN-LAST:event_jLabel3MousePressed
 
 
     void setColor(JPanel panel){
