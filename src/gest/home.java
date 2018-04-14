@@ -244,7 +244,7 @@ public class home extends javax.swing.JFrame {
         titelpanelLayout.setHorizontalGroup(
             titelpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titelpanelLayout.createSequentialGroup()
-                .addGap(0, 157, Short.MAX_VALUE)
+                .addGap(0, 175, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(100, 100, 100))
             .addGroup(titelpanelLayout.createSequentialGroup()
@@ -439,7 +439,7 @@ public class home extends javax.swing.JFrame {
  
         //addingpanel
         
-       cpanel.add(Spanelmodifier);
+        cpanel.add(Spanelmodifier);
         cpanel.repaint();
         cpanel.revalidate();
     }//GEN-LAST:event_btnmodifierMouseClicked
@@ -452,9 +452,7 @@ public class home extends javax.swing.JFrame {
         cpanel.revalidate();
  
         //addingpanel
-        Spanelajouter s = new Spanelajouter();
-        System.out.println(s);
-        cpanel.add(s);
+        cpanel.add(new Ajouter().getContentPane());
         cpanel.repaint();
         cpanel.revalidate();
         
@@ -472,17 +470,14 @@ public class home extends javax.swing.JFrame {
         panel.setBackground(new java.awt.Color( 204,0,51));  
     
     }
+
     
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-       
-        java.awt.EventQueue.invokeLater(() -> {
-            new home().setVisible(true);
-        });
-    }
+//    public static void main(String args[]) {
+//       
+//        java.awt.EventQueue.invokeLater(() -> {
+//            new home().setVisible(true);
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane Spanelmodifier;
